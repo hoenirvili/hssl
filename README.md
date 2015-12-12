@@ -12,7 +12,7 @@ Sarcina consta intr-un **bruteforce** pe o cheie. De la inceput se se cunosc urm
 Pentru a simplifica foarte mult codul s-a folosit o libarie open-source **openssl 1.0.2.e-1**.
 # Encriptia
 Toata treaba pentru encriptie consta in functia urmatoare cu prototipul.
-```
+```c
 unsigned char* encrypt (unsigned char *key, const EVP_CIPHER *algo_type)
 ```
 Aceasta functie ia ca parametru un pointer la o cheie de tip `unsigned char` (valori pozitive, fara bitul de semn, 0-255).
