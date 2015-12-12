@@ -75,7 +75,7 @@ mechanism(const char *alg_path, const char* crypto_path, const EVP_CIPHER *algo_
 			}
 			//
 			// if we still have space in the key, fill all with space chars
-			// or if could just at the begiging memset it to 0x20 all the 16 byts of the key
+			// or we could just at the beginning memset it to 0x20 all the 16 byts of the key
 			// but anyway let's make it consistant
 			for( j = i; j<=0x10; j++) {
 				*key = 0x20;

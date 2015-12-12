@@ -13,7 +13,7 @@ Pentru a simplifica foarte mult codul s-a folosit o libarie open-source **openss
 # Encriptia
 Toata treaba pentru encriptie consta in functia urmatoare cu prototipul.
 ```c
-unsigned char* encrypt (unsigned char *key, const EVP_CIPHER *algo_type)
+unsigned char* encrypt (unsigned char *key, const EVP_CIPHER *algo_type);
 ```
 Aceasta functie ia ca parametru un pointer la o cheie de tip `unsigned char` (valori pozitive, fara bitul de semn, 0-255).
 Folosind acest tip vom reprezenta fiecare bit in forma 0xff, 0x22 etc.Daca foloseam tipul `char` acest tip e paddat adica foloseste abolut toti 8 biti , bitul de semn si cei 7 biti, folosind functii gen ` printf("%x ",mychar); ` puten observa cum afiseaza pe cei 8 biti chiar daca avem valori mici si nu trebuie atasati si nu sub forma de 2 de cat avem nevoie. Al doilea parametru fiind un pointer la o functie de tip `const EVP_CIPHER` aratand ca pointerul in planul nostru de executie nu se modifica, facand astfel memorarea sa spatiul dedicat constantelor.
@@ -112,7 +112,7 @@ Un cod ar fi in felul urmator
 			}
             //
 			// if we still have space in the key, fill all with space chars
-			// or if could just at the begiging memset it to 0x20 all the 16 byts of the key
+			// or we could just at the beginning memset it to 0x20 all the 16 byts of the key
 			// but anyway let's make it consistant
 			for( j = i; j<=0x10; j++) {
 				*key = 0x20;
