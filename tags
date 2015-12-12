@@ -1,0 +1,71 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+ALG_PATH	lib/hssl.h	64;"	d
+BUILD_PATH	Makefile	/^BUILD_PATH = build\/$/;"	m
+CC	Makefile	/^CC = gcc$/;"	m
+CFLAGS	Makefile	/^CFLAGS = -c -std=gnu11 -g -Wall -Wextra -pedantic -Wshadow -Wpointer-arith -Wcast-align -Wmissing-prototypes -Wmissing-declarations -Winline -Wlong-long -Wuninitialized -Wconversion -Wstrict-prototypes -Wno-variadic-macros$/;"	m
+CHUNK	lib/hssl.h	54;"	d
+CRYPTOTEXT_PATH	lib/hssl.h	65;"	d
+EXIT_FAILURE	lib/hssl.h	78;"	d
+EXIT_SUCCESS	lib/hssl.h	74;"	d
+Fclose	lib/wrapper_func.c	/^Fclose(FILE *stream)$/;"	f
+Fgets	lib/wrapper_func.c	/^Fgets(char *ptr, int n, FILE* stream)$/;"	f
+Fopen	lib/wrapper_func.c	/^Fopen(const char *path, const char *mode)$/;"	f
+Fputs	lib/wrapper_func.c	/^Fputs(const char *ptr, FILE*stream)$/;"	f
+Fread	lib/wrapper_func.c	/^Fread(void *ptr, size_t size, size_t nmemb, FILE *stream)$/;"	f
+Fseek	lib/wrapper_func.c	/^Fseek(FILE *stream, long int offset, int whence)$/;"	f
+Ftell	lib/wrapper_func.c	/^Ftell(FILE *stream)$/;"	f
+HSSL_H	lib/hssl.h	2;"	d
+KBLU	lib/hssl.h	45;"	d
+KCYN	lib/hssl.h	47;"	d
+KGRN	lib/hssl.h	43;"	d
+KMAG	lib/hssl.h	46;"	d
+KNRM	lib/hssl.h	41;"	d
+KRED	lib/hssl.h	42;"	d
+KWHT	lib/hssl.h	48;"	d
+KYEL	lib/hssl.h	44;"	d
+LIBS	Makefile	/^LIBS = $(wildcard lib\/*.c)$/;"	m
+LINK_FLAGS	Makefile	/^LINK_FLAGS = -lcrypto -ldl$/;"	m
+Malloc	lib/wrapper_func.c	/^Malloc(size_t size)$/;"	f
+OBJECT	Makefile	/^OBJECT = $(wildcard build\/*.o)$/;"	m
+PLAINTEXT_PATH	lib/hssl.h	63;"	d
+RESET	lib/hssl.h	49;"	d
+RESOLV_PATH	lib/hssl.h	66;"	d
+ReadHexFile	lib/file.c	/^static size_t ReadHexFile(FILE *inf, unsigned char *dest) {$/;"	f	file:
+UTF8_PATH	lib/hssl.h	67;"	d
+a	test/foo.c	/^int a;$/;"	v
+algorithm_type	lib/hssl.h	/^char *algorithm_type;$/;"	v
+alloc_globals	lib/core.c	/^void alloc_globals(void) {$/;"	f
+break_intr	lib/debug.c	/^void break_intr(const int intr, const int count)$/;"	f
+buffer	main.c	/^char buffer[2*CHUNK];$/;"	v
+c	test/foo.c	/^const char *c = "Aceasta este o minciuna";$/;"	v
+crypto_text	lib/hssl.h	/^unsigned char *crypto_text;$/;"	v
+echo_error	lib/error.c	/^echo_error(const char *message, bool display_errno, int errnoflag)$/;"	f
+encrypt	lib/encrypt.c	/^encrypt (unsigned char *key)$/;"	f
+encrypted_text	main.c	/^unsigned char *encrypted_text= NULL;$/;"	v
+enter	lib/debug.c	/^void enter(const char *buff, const size_t len)$/;"	f
+fp	main.c	/^FILE *fp;$/;"	v
+free_globals	lib/core.c	/^void free_globals(void)$/;"	f
+i	main.c	/^size_t n,i,j;$/;"	v
+info	lib/debug.c	/^info(const char *plaintext, const char *algo_t, $/;"	f
+intr	main.c	/^int intr = 0;$/;"	v
+is_equal	lib/encrypt.c	/^is_equal(unsigned char *a, unsigned char *b)$/;"	f
+j	main.c	/^size_t n,i,j;$/;"	v
+key	main.c	/^unsigned char *key = NULL;$/;"	v
+load_from_file	lib/file.c	/^load_from_file(const char* path)$/;"	f
+load_from_file_hex	lib/file.c	/^unsigned char *load_from_file_hex(const char* path)$/;"	f
+main	main.c	/^main(void)$/;"	f
+main	test/foo.c	/^int main(void) {$/;"	f
+n	main.c	/^size_t n,i,j;$/;"	v
+outbuf	lib/encrypt.c	/^static unsigned char outbuf[2*CHUNK];$/;"	v	file:
+outlen	lib/encrypt.c	/^static int outlen, tmplen;$/;"	v	file:
+output	lib/debug.c	/^void output(const char *buff, const size_t len)$/;"	f
+plain_text	lib/hssl.h	/^char *plain_text;$/;"	v
+print_file_content	lib/debug.c	/^print_file_content(const char *path)$/;"	f
+prog_error	lib/error.c	/^prog_error(const char *message, bool display_errno, int errnoflag)$/;"	f
+resolv	lib/hssl.h	/^unsigned char *resolv;$/;"	v
+tmplen	lib/encrypt.c	/^static int outlen, tmplen;$/;"	v	file:
