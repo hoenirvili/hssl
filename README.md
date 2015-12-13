@@ -76,6 +76,7 @@ void alloc_globals(const char *ppath, const char* algpath, const char* crypto_pa
 	plain_text = load_from_file(ppath);
 	algorithm_type = load_from_file(algpath);
 	crypto_text = load_from_file_hex(crypto_path);
+}
 ```
 Functiile
 ```c
