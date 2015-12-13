@@ -14,7 +14,7 @@
 
 
 #include "hssl.h"
-// Our handy pandy error functions
+// our handy pandy error functions
 void
 echo_error(const char *message, bool display_errno, int errnoflag)
 {

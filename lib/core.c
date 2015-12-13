@@ -48,25 +48,25 @@ mechanism(const char *alg_path, const char* crypto_path, const EVP_CIPHER *algo_
 	size_t n,i,j;
 
 	alloc_globals(PLAINTEXT_PATH, alg_path, crypto_path);
-	//Display statistics at the program loads
+	// display statistics at the program loads
 	info(plain_text, algorithm_type, crypto_text);
 
-	// open the main file to load all result
+	// open the file in order to load all result
 	fp = Fopen("test_files/word_dict.txt", "rb");
-	// load line per line per line into buffer of chunks
+	// load line per line into buffer of chunks
 	while(Fgets(buffer, 2*CHUNK, fp) != NULL) {
 		//count the number of lines
 		intr++;
 		// terminate the buffer
 		buffer[strlen(buffer) - 1] = '\0';
-		// if the word from  dictionary is lower or equal 
+		// if the word from  dictionary is lower or equal 16
 		// bytes chars process it
 		if( (n = strlen(buffer)) <= 0x10) {
 			// alloc the key
 			key = Malloc(0x10 * (sizeof(unsigned char)+1));
 			// save the begging of the key
 			unsigned char *savePtr = key;
-			// vor every char from the word of the dict
+			// for every char from the word of the dict
 			for(i=0; i<n; i++) {
 				// asigned the char from the dict to the key
 				*key = (unsigned char)buffer[i];

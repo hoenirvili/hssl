@@ -29,7 +29,7 @@ main(int argc, char *argv[])
 		fprintf(stderr,"aes_128_ecb/aes_128_cbc\n");
 		exit(EXIT_SUCCESS);
 	}
-	// Start bruteforcing for aes_128_ecb 
+	// start brute forecing for aes_128_ecb 
 	// finding the correct key
 	if((strncmp(argv[1], "aes_128_ecb", 11) == 0)) {
 		begin = clock();
@@ -40,7 +40,7 @@ main(int argc, char *argv[])
 		fprintf(stdout, KGRN"\tTIME EXECUTION : "KWHT"%F\n",time_spent);
 		printf("\n");
 	}
-	// start bruteforcing for aes_128_cbc
+	// start brute forcing for aes_128_cbc
 	// finding the correct key
 	if((strncmp(argv[1], "aes_128_cbc", 11) == 0)) {
 		begin = clock();

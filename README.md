@@ -104,7 +104,7 @@ Un cod ar fi in felul urmator
             key = Malloc(0x10 * (sizeof(unsigned char)+1));
 			// save the begging of the key
 			unsigned char *savePtr = key;
-			// vor every char from the word of the dict
+			// for every char from the word of the dict
 			for(i=0; i<n; i++) {
 				// asigned the char from the dict to the key
 				*key = (unsigned char)buffer[i];

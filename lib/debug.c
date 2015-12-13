@@ -25,8 +25,8 @@ output(const void *buff, const size_t len, bool key)
 	if(!key) {
 		// note that hex dump buff is just 8 bits example ffffffff
 		// we are seeing the ffffffff because char is signed on our system
-		// In c vararg funct such as printf will promote all int smaller than
-		// int to int. Sincer char is an integer(8-bit signed integer in our 
+		// in c vararg funct such as printf will promote all int smaller than
+		// int to int, sincer char is an integer(8-bit signed integer in our 
 		// case.
 		buffer = (char*)buff;
 		printf("Length: %lu\n",len);
@@ -66,7 +66,7 @@ output(const void *buff, const size_t len, bool key)
 	}
 }
 
-// debug function if the buffer contains "\n" chars
+// debug function , testif the buffer contains "\n" char
 void 
 enter(const char *buff, const size_t len)
 {
