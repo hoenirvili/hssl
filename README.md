@@ -1,6 +1,6 @@
-# Bruteforce key test case
+# Brute force key test case
 
-Sarcina consta intr-un **bruteforce** pe o cheie. De la inceput se se cunosc urmatoarele:
+Sarcina consta intr-un **brute force** pe o cheie. De la inceput se se cunosc urmatoarele:
 - cheia contine 16 caractere(16 bytes).
 - cheia provine dintr-un [dictionar](http://profs.info.uaic.ro/~olgai/si2015/cripto/word_dict.txt) de cuvinte de origine englez. 
 - unul dintre cuvintele din acel dinctionar poate fi mai mic sau egal de 16 caratere 
@@ -26,7 +26,7 @@ Folosind acest tip vom reprezenta fiecare bit in forma 0xff, 0x22 etc.Daca folos
     * `char` poate fi de la [0..127] [-127..127] depinde de arhitectura foarte mult.
 
 
-Programul primeste ca argumente tipul arlgoritmului cu care vrem sa testam **bruteforce-ul**
+Programul primeste ca argumente tipul arlgoritmului cu care vrem sa testam **brute force-ul**
 - aes_128_ecb
 - aes_128_cbc
 
@@ -95,7 +95,7 @@ void free_globals(void)
 	free(crypto_text);
 }
 ```
-Totusi cea mai mare parte din alocari se petrece secvential pe parcursul **bruteforce-ului** nostru.Deoarece, mereu vom aloca cate o cheie noua in funtie de fiecare cuvant din dictionarul englez stabilit mai sus. Trebuie sa avem grija ca dupa ce folosim memoria sa o eliberam la fel secvential. **De ce nu toata la final?** Pentru ca programul nostru ar suferii mari pierderi de memorie si ar aloca mult prea multa. Un caz nefericit, dictionarul avand peste 50000 de linii(cuvinte) asta inseamna 50000 de mii de alocari si de asta pe parcurs la o alocare trebuie sa existe si o eliberare de memorie.
+Totusi cea mai mare parte din alocari se petrece secvential pe parcursul **brute force-ului** nostru.Deoarece, mereu vom aloca cate o cheie noua in funtie de fiecare cuvant din dictionarul englez stabilit mai sus. Trebuie sa avem grija ca dupa ce folosim memoria sa o eliberam la fel secvential. **De ce nu toata la final?** Pentru ca programul nostru ar suferii mari pierderi de memorie si ar aloca mult prea multa. Un caz nefericit, dictionarul avand peste 50000 de linii(cuvinte) asta inseamna 50000 de mii de alocari si de asta pe parcurs la o alocare trebuie sa existe si o eliberare de memorie.
 
 Un cod ar fi in felul urmator
 ```c
