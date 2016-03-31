@@ -1,6 +1,6 @@
 # Brute force key test case
 
-Sarcina consta intr-un **brute force** pe o cheie. De la inceput se se cunosc urmatoarele:
+Sarcina consta intr-un **brute force** pe o cheie. De la inceput se cunosc urmatoarele:
 - cheia contine 16 caractere(16 bytes).
 - cheia provine dintr-un [dictionar](http://profs.info.uaic.ro/~olgai/si2015/cripto/word_dict.txt) de cuvinte de origine englez. 
 - unul dintre cuvintele din acel dinctionar poate fi mai mic sau egal de 16 caratere 
@@ -16,7 +16,7 @@ Toata treaba pentru encriptie consta in functia urmatoare cu prototipul.
 unsigned char* encrypt (unsigned char *key, const EVP_CIPHER *algo_type);
 ```
 Aceasta functie ia ca parametru un pointer la o cheie de tip `unsigned char` (valori pozitive, fara bitul de semn, 0-255).
-Folosind acest tip vom reprezenta fiecare bit in forma 0xff, 0x22 etc.Daca foloseam tipul `char` acest tip e paddat adica foloseste abolut toti 8 biti , bitul de semn si cei 7 biti, folosind functii gen ` printf("%x ",mychar); ` puten observa cum afiseaza pe cei 8 biti chiar daca avem valori mici si nu trebuie atasati si nu sub forma de 2 de cat avem nevoie. Al doilea parametru fiind un pointer la o functie de tip `const EVP_CIPHER` aratand ca pointerul in planul nostru de executie nu se modifica, facand astfel memorarea sa spatiul dedicat constantelor.
+Folosind acest tip vom reprezenta fiecare bit in forma 0xff, 0x22 etc.Daca foloseam tipul `char` acest tip e paddat adica foloseste abolut toti 8 biti , bitul de semn si cei 7 biti, folosind functii gen ` printf("%x ",mychar); ` puten observa cum afisam cei 8 biti chiar daca avem valori mici si nu trebuie atasati conform de 2 de cat avem nevoie. Al doilea parametru fiind un pointer la o functie de tip `const EVP_CIPHER` aratand ca valoarea pointata de pointer in planul nostru de executie nu se modifica, facand astfel memorarea sa spatiul dedicat constantelor.
 **Funcia returneaza  un buffer criptat.**
 
 ##### Observatie
