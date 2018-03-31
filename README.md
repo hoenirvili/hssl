@@ -32,20 +32,20 @@ Programul primeste ca argumente tipul arlgoritmului cu care vrem sa testam **bru
 
 ```c
 if(argc < 2) {
-		fprintf(stderr,"./main [command]\n");
-		fprintf(stderr,"aes_128_ecb/aes_128_cbc\n");
-		exit(EXIT_SUCCESS);
-	}
-	// Start bruteforcing for aes_128_ecb 
-	// finding the correct key
-	if((strncmp(argv[1], "aes_128_ecb", 11) == 0)) {
-        //code..
-    }
-    // start bruteforcing for aes_128_cbc
-	// finding the correct key
-	if((strncmp(argv[1], "aes_128_cbc", 11) == 0)) {
-	    //code..
-	}
+	fprintf(stderr,"./main [command]\n");
+	fprintf(stderr,"aes_128_ecb/aes_128_cbc\n");
+	exit(EXIT_SUCCESS);
+}
+// Start bruteforcing for aes_128_ecb 
+// finding the correct key
+if((strncmp(argv[1], "aes_128_ecb", 11) == 0)) {
+	//code..
+}
+// start bruteforcing for aes_128_cbc
+// finding the correct key
+if((strncmp(argv[1], "aes_128_cbc", 11) == 0)) {
+	//code..
+}
 ```
 # Timpul
 Timpul executiei este cronometrat.
@@ -99,38 +99,39 @@ Totusi cea mai mare parte din alocari se petrece secvential pe parcursul **brute
 
 Un cod ar fi in felul urmator
 ```c
+
 //code
-            // alloc the key
-            key = Malloc(0x10 * (sizeof(unsigned char)+1));
-			// save the begging of the key
-			unsigned char *savePtr = key;
-			// for every char from the word of the dict
-			for(i=0; i<n; i++) {
-				// asigned the char from the dict to the key
-				*key = (unsigned char)buffer[i];
-				// increment the key
-				key ++;
-			}
-            //
-			// if we still have space in the key, fill all with space chars
-			// or we could just at the beginning memset it to 0x20 all the 16 byts of the key
-			// but anyway let's make it consistant
-			for( j = i; j<=0x10; j++) {
-				*key = 0x20;
-				key++;
-			}
-			key = savePtr;
-			// null terminate 
-			key[0x11] = 0;
-			encrypted_text = encrypt(key, algo_type);
-			
-			if(is_equal(encrypted_text, crypto_text)) {
-				output(key, 16, true);
-				free(key);
-				break;
-			}
-			
-			free(key);
+// alloc the key
+key = Malloc(0x10 * (sizeof(unsigned char)+1));
+// save the begging of the key
+unsigned char *savePtr = key;
+// for every char from the word of the dict
+for(i=0; i<n; i++) {
+	// asigned the char from the dict to the key
+	*key = (unsigned char)buffer[i];
+	// increment the key
+	key ++;
+}
+//
+// if we still have space in the key, fill all with space chars
+// or we could just at the beginning memset it to 0x20 all the 16 byts of the key
+// but anyway let's make it consistant
+for( j = i; j<=0x10; j++) {
+	*key = 0x20;
+	key++;
+}
+key = savePtr;
+// null terminate 
+key[0x11] = 0;
+encrypted_text = encrypt(key, algo_type);
+
+if(is_equal(encrypted_text, crypto_text)) {
+	output(key, 16, true);
+	free(key);
+	break;
+}
+
+free(key);
 // more code
 ```
 ### Valgrind

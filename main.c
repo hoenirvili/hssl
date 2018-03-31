@@ -13,23 +13,21 @@
 //	limitations under the License.
 
 #include "lib/hssl.h"
-// time values
+
 clock_t begin, end;
 double time_spent;
 
 int
 main(int argc, char *argv[])
 {
-	// for formatting reasons
 	printf("\n");
-	// if we don't have any commands to parse
-	// just exit
 	if(argc < 2) {
 		fprintf(stderr,"./main [command]\n");
 		fprintf(stderr,"aes_128_ecb/aes_128_cbc\n");
 		exit(EXIT_SUCCESS);
 	}
-	// start brute forecing for aes_128_ecb 
+	
+	// start brute forcing for aes_128_ecb 
 	// finding the correct key
 	if((strncmp(argv[1], "aes_128_ecb", 11) == 0)) {
 		begin = clock();
@@ -40,6 +38,7 @@ main(int argc, char *argv[])
 		fprintf(stdout, KGRN"\tTIME EXECUTION : "KWHT"%F\n",time_spent);
 		printf("\n");
 	}
+	
 	// start brute forcing for aes_128_cbc
 	// finding the correct key
 	if((strncmp(argv[1], "aes_128_cbc", 11) == 0)) {
